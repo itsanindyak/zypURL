@@ -21,8 +21,11 @@ export function RecentUrls({ urls, onSelect, onClear }: RecentUrlsProps) {
   const copyUrl = async (url: ShortenedUrlType, e: React.MouseEvent) => {
     e.stopPropagation();
 
+     const link = process.env.NEXT_PUBLIC_URL;
+    const urlLink:string =  `${link}/g/${url.shortUrl}`
+
     try {
-      await navigator.clipboard.writeText(url.shortUrl);
+      await navigator.clipboard.writeText(urlLink);
       toast({
         title: "Copied!",
         description: "URL copied to clipboard",

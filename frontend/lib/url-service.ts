@@ -1,6 +1,6 @@
-import { ShortenedUrlType } from '@/hooks/use-url-history';
+ import { ShortenedUrlType } from '@/hooks/use-url-history';
 import axios from 'axios';
-import { time } from 'console';
+
 
 
 export async function shortenUrl(url: string ): Promise<ShortenedUrlType> {
