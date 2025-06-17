@@ -3,9 +3,7 @@ import { app } from "./app.js";
 import { connectDB, connectRedis } from "./db/index.js";
 import { redisToDb } from "./jobs/cleanup.js";
 
-dotenv.config({
-  path: "./.env",
-});
+dotenv.config();
 let server;
 
 connectDB()
